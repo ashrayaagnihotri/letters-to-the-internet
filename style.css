@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&display=swap');
+
+.letter-line {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 150;
+  white-space: pre-wrap;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+  color: inherit;
+}
+
+.letter-block {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.loading-line {
+  font-style: italic;
+  opacity: 0.7;
+  margin-bottom: 8px;
+}
+
+body {
+  margin: 0;
+  background-color: #f8f3f9;
+  color: #444;
+  font-family: 'Fira Code', monospace;
+  font-size: 18px; /* Increased from 16px */
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.terminal {
+  background-color: #fdf6fb;
+  border: 1px solid #e8dff3;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  max-width: 800px;
+  margin: 50px auto;
+  white-space: pre-wrap;
+  transition: all 0.3s ease;
+  font-size: 1.05rem; /* Increased font size */
+  overflow-x: auto;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #eee;
+}
+
+body.dark-mode .terminal {
+  background-color: #1e1e1e;
+  border-color: #333;
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.05);
+}
+
+.past-line {
+  color: #c73f91;
+  font-family: 'Courier New', monospace;
+}
+
+.input-line .prompt {
+  color: #e85ca5;
+  font-weight: bold;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.user-input::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1.0em;
+  background-color: #e85ca5;
+  margin-left: 2px;
+  animation: blink 1s steps(1) infinite;
+  vertical-align: bottom;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.letter-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .terminal {
+    padding: 15px;
+    font-size: 1rem;
+    margin: 20px 10px;
+    width: auto;
+    max-width: 100%;
+    word-wrap: break-word;
+  }
+
+  .letter-line {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  .letter-block {
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+
+  .letter-title {
+    font-size: 1rem;
+  }
+}
