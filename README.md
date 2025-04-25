@@ -1,4 +1,4 @@
-# Terminal Portfolio — Ashraya Agnihotri
+# Terminal Portfolio 
 
 A web-based terminal-style portfolio designed with interactivity and simplicity. Visitors can explore information about Ashraya Agnihotri through typed commands and a small interactive quiz.
 
